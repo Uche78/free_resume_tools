@@ -24,11 +24,17 @@
 
 # Redirect configuration
 [[redirects]]
-  from = "/job-match"
+  from = "/match"
   to = "/match"
   status = 301
 
 [[redirects]]
-  from = "/fix-my-resume"
+  from = "/fix"
   to = "/fix"
   status = 301
+
+  # SPA fallback - MUST be last
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
