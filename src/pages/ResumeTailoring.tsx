@@ -639,7 +639,7 @@ const ResumeTailoring: React.FC = () => {
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     <div className="bg-gray-50 p-6 rounded-lg text-center">
-                      <div className="w-10 h-10 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
                         <CheckCircle className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">ATS Optimization</h3>
@@ -648,7 +648,7 @@ const ResumeTailoring: React.FC = () => {
                       </p>
                     </div>
                     <div className="bg-gray-50 p-6 rounded-lg text-center">
-                      <div className="w-10 h-10 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
                         <TrendingUp className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">Enhanced Career Prospects</h3>
@@ -657,7 +657,7 @@ const ResumeTailoring: React.FC = () => {
                       </p>
                     </div>
                     <div className="bg-gray-50 p-6 rounded-lg text-center md:col-span-2 lg:col-span-1">
-                      <div className="w-10 h-10 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
                         <Clock className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">Time-Efficient Process</h3>
