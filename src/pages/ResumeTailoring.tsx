@@ -30,20 +30,22 @@ const ResumeTailoring: React.FC = () => {
   const category = "Career Services";
   const providerName = "FreeResumeTools";
   
-  // Load non-critical sections after initial render - optimized timing
+  // Load non-critical sections after initial render - mobile optimized timing
   useEffect(() => {
     // Mark hero as loaded immediately for layout stability
     setHeroLoaded(true);
     
-    // Delay non-critical content to improve FCP/LCP
-    const timer = setTimeout(() => setShowNonCritical(true), 200);
+    // More aggressive delay for mobile to improve LCP
+    const isMobile = window.innerWidth < 768;
+    const delay = isMobile ? 500 : 200;
+    const timer = setTimeout(() => setShowNonCritical(true), delay);
     return () => clearTimeout(timer);
   }, []);
 
-  // Optimized analytics loading - defer until after interaction or timeout
+  // Optimized analytics loading - more aggressive mobile delay
   useEffect(() => {
     const loadAnalytics = () => {
-      if ((window as any).gtag) return; // Prevent duplicate loading
+      if ((window as any).gtag) return;
       
       const script = document.createElement('script');
       script.src = 'https://www.googletagmanager.com/gtag/js?id=G-G9P3SJ733H';
@@ -57,7 +59,8 @@ const ResumeTailoring: React.FC = () => {
       document.head.appendChild(script);
     };
 
-    // Load on first user interaction for better performance
+    // Mobile-first approach - longer delays for mobile devices
+    const isMobile = window.innerWidth < 768;
     const events = ['click', 'scroll', 'keydown', 'touchstart'];
     const handleInteraction = () => {
       loadAnalytics();
@@ -66,8 +69,9 @@ const ResumeTailoring: React.FC = () => {
 
     events.forEach(event => document.addEventListener(event, handleInteraction, { once: true, passive: true }));
     
-    // Fallback after 3 seconds
-    const fallbackTimer = setTimeout(loadAnalytics, 3000);
+    // Longer fallback for mobile to prioritize content loading
+    const fallbackDelay = isMobile ? 5000 : 3000;
+    const fallbackTimer = setTimeout(loadAnalytics, fallbackDelay);
     
     return () => {
       clearTimeout(fallbackTimer);
@@ -443,13 +447,14 @@ const ResumeTailoring: React.FC = () => {
           </div>
         </section>
 
-        {/* Loading placeholder for non-critical sections */}
+        {/* Loading placeholder for non-critical sections - mobile optimized */}
         {!showNonCritical && (
-          <div className="py-12" role="status" aria-label="Loading content">
+          <div className="py-6 sm:py-12" role="status" aria-label="Loading content">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="animate-pulse space-y-8">
-                <div className="bg-gray-200 h-64 rounded-xl"></div>
-                <div className="bg-gray-200 h-96 rounded-xl"></div>
+              <div className="animate-pulse space-y-4 sm:space-y-8">
+                <div className="bg-gray-200 h-32 sm:h-64 rounded-xl"></div>
+                <div className="bg-gray-200 h-48 sm:h-96 rounded-xl"></div>
+                <div className="bg-gray-200 h-24 sm:h-48 rounded-xl"></div>
               </div>
             </div>
           </div>
@@ -634,7 +639,7 @@ const ResumeTailoring: React.FC = () => {
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     <div className="bg-gray-50 p-6 rounded-lg text-center">
-                      <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <div className="w-10 h-10 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
                         <CheckCircle className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">ATS Optimization</h3>
@@ -643,7 +648,7 @@ const ResumeTailoring: React.FC = () => {
                       </p>
                     </div>
                     <div className="bg-gray-50 p-6 rounded-lg text-center">
-                      <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <div className="w-10 h-10 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
                         <TrendingUp className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">Enhanced Career Prospects</h3>
@@ -652,7 +657,7 @@ const ResumeTailoring: React.FC = () => {
                       </p>
                     </div>
                     <div className="bg-gray-50 p-6 rounded-lg text-center md:col-span-2 lg:col-span-1">
-                      <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <div className="w-10 h-10 bg-[#3b3b3b] rounded-lg flex items-center justify-center mx-auto mb-4">
                         <Clock className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">Time-Efficient Process</h3>
