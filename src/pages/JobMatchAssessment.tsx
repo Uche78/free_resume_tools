@@ -384,74 +384,6 @@ const JobMatchAssessment: React.FC = () => {
           </div>
         </section>
 
-        {/* How It Works Section - Mobile Optimized */}
-        <section className="py-8 sm:py-12 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gray-50 p-4 sm:p-6 lg:p-8 rounded-xl mb-8">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl text-center font-bold text-[#3b3b3b] mb-6 sm:mb-8">How Job Match Analysis Works</h2>
-              
-              {/* Mobile: Horizontal scrollable steps */}
-              <div className="block sm:hidden">
-                <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-                  <div className="flex flex-col items-center text-center min-w-[260px] snap-center px-2">
-                    <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-3 flex-shrink-0">
-                      <Upload className="w-6 h-6 text-white" aria-hidden="true" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">1. Upload Resume</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Upload your resume in PDF, DOC, or DOCX format. Our AI will analyze every detail.</p>
-                  </div>
-                  <div className="flex flex-col items-center text-center min-w-[260px] snap-center px-2">
-                    <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-3 flex-shrink-0">
-                      <FileText className="w-6 h-6 text-white" aria-hidden="true" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">2. Add Job Description</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Paste the complete job posting including requirements and qualifications.</p>
-                  </div>
-                  <div className="flex flex-col items-center text-center min-w-[260px] snap-center px-2">
-                    <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-3 flex-shrink-0">
-                      <Download className="w-6 h-6 text-white" aria-hidden="true" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">3. Get Match Report</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">Download detailed analysis with compatibility score and improvement tips.</p>
-                  </div>
-                </div>
-                
-                {/* Mobile scroll indicator dots */}
-                <div className="flex justify-center gap-2 mt-4" role="tablist" aria-label="Step indicators">
-                  <div className="w-2 h-2 bg-[#3b3b3b] rounded-full" role="tab" aria-label="Step 1"></div>
-                  <div className="w-2 h-2 bg-gray-300 rounded-full" role="tab" aria-label="Step 2"></div>
-                  <div className="w-2 h-2 bg-gray-300 rounded-full" role="tab" aria-label="Step 3"></div>
-                </div>
-              </div>
-              
-              {/* Desktop/Tablet: Grid layout */}
-              <div className="hidden sm:grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-4 flex-shrink-0">
-                    <Upload className="w-8 h-8 text-white" aria-hidden="true" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-[#3b3b3b]">1. Upload Your Resume</h3>
-                  <p className="text-gray-600 leading-relaxed">Upload your resume in PDF, DOC, or DOCX format. Our AI will analyze every detail for job compatibility.</p>
-                </div>
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-4 flex-shrink-0">
-                    <FileText className="w-8 h-8 text-white" aria-hidden="true" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-[#3b3b3b]">2. Add Job Description</h3>
-                  <p className="text-gray-600 leading-relaxed">Paste the complete job posting including requirements, qualifications, and responsibilities.</p>
-                </div>
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-4 flex-shrink-0">
-                    <Download className="w-8 h-8 text-white" aria-hidden="true" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-[#3b3b3b]">3. Get Match Report</h3>
-                  <p className="text-gray-600 leading-relaxed">Download your detailed analysis with compatibility score, keyword matching, and improvement recommendations.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
             {/* Main Tool Section - Enhanced Mobile Experience */}
         <section className="py-8 sm:py-12 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -604,6 +536,74 @@ const JobMatchAssessment: React.FC = () => {
                   <p className="text-[#3b3b3b] text-sm leading-relaxed">
                     Insights on how to make your resume more ATS-friendly for this specific role.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section - Mobile Optimized */}
+        <section className="py-8 sm:py-12 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gray-50 p-4 sm:p-6 lg:p-8 rounded-xl mb-8">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-center font-bold text-[#3b3b3b] mb-6 sm:mb-8">How Job Match Analysis Works</h2>
+              
+              {/* Mobile: Horizontal scrollable steps */}
+              <div className="block sm:hidden">
+                <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+                  <div className="flex flex-col items-center text-center min-w-[260px] snap-center px-2">
+                    <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-3 flex-shrink-0">
+                      <Upload className="w-6 h-6 text-white" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">1. Upload Resume</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Upload your resume in PDF, DOC, or DOCX format. Our AI will analyze every detail.</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center min-w-[260px] snap-center px-2">
+                    <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-3 flex-shrink-0">
+                      <FileText className="w-6 h-6 text-white" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">2. Add Job Description</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Paste the complete job posting including requirements and qualifications.</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center min-w-[260px] snap-center px-2">
+                    <div className="w-12 h-12 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-3 flex-shrink-0">
+                      <Download className="w-6 h-6 text-white" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">3. Get Match Report</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">Download detailed analysis with compatibility score and improvement tips.</p>
+                  </div>
+                </div>
+                
+                {/* Mobile scroll indicator dots */}
+                <div className="flex justify-center gap-2 mt-4" role="tablist" aria-label="Step indicators">
+                  <div className="w-2 h-2 bg-[#3b3b3b] rounded-full" role="tab" aria-label="Step 1"></div>
+                  <div className="w-2 h-2 bg-gray-300 rounded-full" role="tab" aria-label="Step 2"></div>
+                  <div className="w-2 h-2 bg-gray-300 rounded-full" role="tab" aria-label="Step 3"></div>
+                </div>
+              </div>
+              
+              {/* Desktop/Tablet: Grid layout */}
+              <div className="hidden sm:grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-4 flex-shrink-0">
+                    <Upload className="w-8 h-8 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-[#3b3b3b]">1. Upload Your Resume</h3>
+                  <p className="text-gray-600 leading-relaxed">Upload your resume in PDF, DOC, or DOCX format. Our AI will analyze every detail for job compatibility.</p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-4 flex-shrink-0">
+                    <FileText className="w-8 h-8 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-[#3b3b3b]">2. Add Job Description</h3>
+                  <p className="text-gray-600 leading-relaxed">Paste the complete job posting including requirements, qualifications, and responsibilities.</p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-4 flex-shrink-0">
+                    <Download className="w-8 h-8 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-[#3b3b3b]">3. Get Match Report</h3>
+                  <p className="text-gray-600 leading-relaxed">Download your detailed analysis with compatibility score, keyword matching, and improvement recommendations.</p>
                 </div>
               </div>
             </div>
