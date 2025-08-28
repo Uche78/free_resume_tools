@@ -700,9 +700,7 @@ const FixResume: React.FC = () => {
                 {/* Job Match Tool */}
                 <div className="p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow transition-shadow duration-200">
                   <div className="flex text-center gap-4">
-                    <div className="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <FileText className="w-6 h-6 text-white" />
-                    </div>
+
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-[#3b3b3b] mb-2">Job Match Analyzer</h3>
                       <p className="text-gray-600 text-sm mb-4 leading-relaxed">
