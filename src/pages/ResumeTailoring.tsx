@@ -447,45 +447,7 @@ const ResumeTailoring: React.FC = () => {
           </div>
         </section>
 
-        {/* Loading placeholder for non-critical sections - mobile optimized */}
-        {!showNonCritical && (
-          <div className="py-6 sm:py-12" role="status" aria-label="Loading content">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="animate-pulse space-y-4 sm:space-y-8">
-                <div className="bg-gray-200 h-32 sm:h-64 rounded-xl"></div>
-                <div className="bg-gray-200 h-48 sm:h-96 rounded-xl"></div>
-                <div className="bg-gray-200 h-24 sm:h-48 rounded-xl"></div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Non-critical sections load after initial render */}
-        {showNonCritical && (
-          <>
-            {/* How It Works Section - Mobile Optimized */}
-            <HowItWorksSection 
-              title="How Professional Resume Tailoring Works"
-              steps={[
-                {
-                  icon: Upload,
-                  title: "1. Upload Your Resume",
-                  description: "Upload your current resume in PDF, DOC, or DOCX format. Our secure system processes it professionally."
-                },
-                {
-                  icon: FileText,
-                  title: "2. Add Job Description", 
-                  description: "Copy and paste the complete job description you're applying for. Include all requirements and qualifications."
-                },
-                {
-                  icon: Download,
-                  title: "3. Get Optimized Resume",
-                  description: "Download your professionally tailored resume optimized for ATS systems and job requirements."
-                }
-              ]}
-            />
-
-            {/* Main Tool Section - Enhanced Mobile Experience */}
+        {/* Main Tool Section - Enhanced Mobile Experience */}
             <section className="py-8 sm:py-12 bg-white"> 
               <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
@@ -512,7 +474,7 @@ const ResumeTailoring: React.FC = () => {
                         
                         <div className="space-y-2">
                           <label className="block text-sm font-medium text-[#3b3b3b]" htmlFor="job-description">
-                            Job Description
+                            Copy and Paste the Job Description You are Applying For
                           </label>
                           <textarea
                             id="job-description"
@@ -629,6 +591,45 @@ const ResumeTailoring: React.FC = () => {
                 </div>
               </div>
             </section>
+
+        {/* Loading placeholder for non-critical sections - mobile optimized */}
+        {!showNonCritical && (
+          <div className="py-6 sm:py-12" role="status" aria-label="Loading content">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="animate-pulse space-y-4 sm:space-y-8">
+                <div className="bg-gray-200 h-32 sm:h-64 rounded-xl"></div>
+                <div className="bg-gray-200 h-48 sm:h-96 rounded-xl"></div>
+                <div className="bg-gray-200 h-24 sm:h-48 rounded-xl"></div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Non-critical sections load after initial render */}
+        {showNonCritical && (
+          <>
+            {/* How It Works Section - Mobile Optimized 
+            <HowItWorksSection 
+              title="How Professional Resume Tailoring Works"
+              steps={[
+                {
+                  icon: Upload,
+                  title: "1. Upload Your Resume",
+                  description: "Upload your current resume in PDF, DOC, or DOCX format. Our secure system processes it professionally."
+                },
+                {
+                  icon: FileText,
+                  title: "2. Add Job Description", 
+                  description: "Copy and paste the complete job description you're applying for. Include all requirements and qualifications."
+                },
+                {
+                  icon: Download,
+                  title: "3. Get Optimized Resume",
+                  description: "Download your professionally tailored resume optimized for ATS systems and job requirements."
+                }
+              ]}
+            />*/}
+
 
             {/* Benefits Section - Enhanced for Google Ads */}
             <section className="py-8 sm:py-12 bg-white"> 
