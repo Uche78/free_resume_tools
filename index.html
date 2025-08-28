@@ -191,18 +191,6 @@
     <!-- Defer analytics to improve page load performance -->
     <script>
       function loadAnalytics() {
-        // Google Analytics
-        const gtag = document.createElement('script');
-        gtag.async = true;
-        gtag.src = 'https://www.googletagmanager.com/gtag/js?id=G-G9P3SJ733H';
-        document.head.appendChild(gtag);
-        
-        gtag.onload = function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-G9P3SJ733H');
-        };
         
         // Google AdSense
         const adsense = document.createElement('script');
