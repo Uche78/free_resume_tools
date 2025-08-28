@@ -376,10 +376,10 @@ const JobMatchAssessment: React.FC = () => {
                 </div>
               </div>
 
-              {/* Last Updated */}
+              {/* Last Updated
               <div className="text-sm text-gray-500 mb-6">
                 Last updated: August 2025
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
