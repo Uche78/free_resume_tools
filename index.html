@@ -10,9 +10,14 @@
     <!-- Critical resource hints -->
     <link rel="preconnect" href="https://krzofnafayygoxoinkfv.supabase.co" />
     <link rel="dns-prefetch" href="https://hook.us2.make.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
     
     <!-- Preload critical resources -->
     <link rel="modulepreload" href="/src/main.tsx" />
+    <link rel="modulepreload" href="/assets/index-DDfuiFW.js" />
+    <link rel="modulepreload" href="/assets/resumetailoring-ckktdo5k.js" />
+    <link rel="modulepreload" href="/assets/modal-BvT-dTv1.js" />
     
     <!-- Load CSS asynchronously to prevent render blocking -->
     <link rel="preload" href="/assets/index-DhT7pdto.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -198,6 +203,13 @@
           gtag('js', new Date());
           gtag('config', 'G-G9P3SJ733H');
         };
+        
+        // Google AdSense
+        const adsense = document.createElement('script');
+        adsense.async = true;
+        adsense.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9699254139710581';
+        adsense.crossOrigin = 'anonymous';
+        document.head.appendChild(adsense);
         
         // Microsoft Clarity
         (function(c,l,a,r,i,t,y){
