@@ -370,21 +370,21 @@ const FixResume: React.FC = () => {
                 </div>
               </div>
 
-              {/* Last Updated */}
+              {/* Last Updated
               <div className="text-sm text-gray-500 mb-6">
                 Last updated: August 2025
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
 
-        {/* How It Works Section - Mobile Optimized */}
+        {/* How It Works Section - Mobile Optimized
         <section className="py-8 sm:py-12 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gray-50 p-4 sm:p-6 lg:p-8 rounded-xl mb-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl text-center font-bold text-[#3b3b3b] mb-6 sm:mb-8">How Resume Analysis Works</h2>
               
-              {/* Mobile: Horizontal scrollable steps */}
+              {/* Mobile: Horizontal scrollable steps
               <div className="block sm:hidden">
                 <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
                   <div className="flex flex-col items-center text-center min-w-[260px] snap-center px-2">
@@ -410,7 +410,7 @@ const FixResume: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Mobile scroll indicator dots */}
+                {/* Mobile scroll indicator dots
                 <div className="flex justify-center gap-2 mt-4" role="tablist" aria-label="Step indicators">
                   <div className="w-2 h-2 bg-[#3b3b3b] rounded-full" role="tab" aria-label="Step 1"></div>
                   <div className="w-2 h-2 bg-gray-300 rounded-full" role="tab" aria-label="Step 2"></div>
@@ -418,7 +418,7 @@ const FixResume: React.FC = () => {
                 </div>
               </div>
               
-              {/* Desktop/Tablet: Grid layout */}
+              {/* Desktop/Tablet: Grid layout
               <div className="hidden sm:grid sm:grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-[#3b3b3b] rounded-lg flex items-center justify-center mb-4 flex-shrink-0">
@@ -444,7 +444,7 @@ const FixResume: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
             {/* Main Tool Section - Enhanced Mobile Experience */}
         <section className="py-8 sm:py-12 bg-white">
