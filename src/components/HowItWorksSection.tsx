@@ -32,7 +32,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
                   <step.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-[#3b3b3b]">{step.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{step.description}</p>
+                <p className="text-gray-600 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
