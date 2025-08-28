@@ -608,7 +608,7 @@ const ResumeTailoring: React.FC = () => {
         {/* Non-critical sections load after initial render */}
         {showNonCritical && (
           <>
-            {/* How It Works Section - Mobile Optimized 
+            {/* How It Works Section - Mobile Optimized */}
             <HowItWorksSection 
               title="How Professional Resume Tailoring Works"
               steps={[
@@ -628,7 +628,7 @@ const ResumeTailoring: React.FC = () => {
                   description: "Download your professionally tailored resume optimized for ATS systems and job requirements."
                 }
               ]}
-            />*/}
+            />
 
 
             {/* Benefits Section - Enhanced for Google Ads */}
