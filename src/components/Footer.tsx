@@ -39,10 +39,10 @@ const Footer: React.FC = () => {
                 <Link to="/match" className="text-gray-600 hover:text-blue-600 transition-colors">Job Match Assessment</Link>
               </li>
               <li>
-                <Link to="/tailoring" className="text-gray-600 hover:text-blue-600 transition-colors">Resume Tailoring</Link>
+                <Link to="/tailor-my-resume" className="text-gray-600 hover:text-blue-600 transition-colors">Resume Tailoring</Link>
               </li>
               <li>
-                <Link to="/fix" className="text-gray-600 hover:text-blue-600 transition-colors">Fix My Resume</Link>
+                <Link to="/resume-fixer" className="text-gray-600 hover:text-blue-600 transition-colors">Fix My Resume</Link>
               </li>
             </ul>
           </div>
