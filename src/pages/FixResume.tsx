@@ -114,7 +114,7 @@ const FixResume: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Helmet>
-        <title>Free AI Resume Analyzer & Fixer Tool - Get Professional Feedback | FreeResumeTools</title>
+        <title>Free AI Resume Fixer & Analyzer Tool - Get Professional Feedback | FreeResumeTools</title>
         <meta name="description" content="Free AI-powered resume analyzer that identifies formatting issues, content gaps, and ATS compatibility problems. Get professional feedback with actionable suggestions to improve your resume instantly." />
         <meta name="keywords" content="resume analyzer, resume fixer, free resume review, ATS checker, resume feedback, professional resume analysis, resume improvement tool, CV analyzer" />
         
@@ -347,7 +347,7 @@ const FixResume: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#3b3b3b] mb-4 sm:mb-6 leading-tight">
-                Free AI Resume Analyzer & Fixer Tool
+                Free AI Resume Fixer Tool
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
                 Get professional AI-powered feedback and actionable suggestions to improve your resume. 
