@@ -569,9 +569,9 @@ function App() {
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/" element={<ResumeTailoring />} />
-        <Route path="/tailoring" element={<ResumeTailoring />} />
+        <Route path="/tailor-my-resume" element={<ResumeTailoring />} />
         <Route path="/match" element={<JobMatchAssessment />} />
-        <Route path="/fix" element={<FixResume />} />
+        <Route path="/resume-fixer" element={<FixResume />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/about" element={<AboutPage />} />
