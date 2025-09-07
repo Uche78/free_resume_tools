@@ -82,7 +82,7 @@ const Header: React.FC = () => {
   const toolsLinks = [
     { 
       name: 'Resume Tailoring', 
-      path: '/tailoring',  
+      path: '/tailor-my-resume',  
     },
     { 
       name: 'Job Match', 
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
     },
     {
       name: 'Fix My Resume',
-      path: '/fix',
+      path: '/resume-fixer',
     }
   ];
 
