@@ -817,7 +817,7 @@ const ResumeTailoring: React.FC = () => {
                           </p>
                           
                           <Link 
-                            to="/fix" 
+                            to="/resume-fixer" 
                             className="inline-flex items-center gap-2 px-4 py-2 bg-[#3b3b3b] text-white rounded-lg hover:bg-gray-700 transition-colors text-sm font-medium"
                           >
                             Analyze My Resume
