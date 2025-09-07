@@ -1,11 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="https://krzofnafayygoxoinkfv.supabase.co/storage/v1/object/public/public-landing-assets/hero/resumetoolfavicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Resume Tools - Resume Tailoring & Job Match with AI-Powered Optimization</title>
-    <meta name="description" content="Optimize your resume for free with Free Resume Tools—no signup required! Use our 100% free, AI-powered resume tailoring and job match feature to get a match percentage, actionable tips, and improve your chances of landing interviews. Perfect for job seekers at any level!">
+    <title>Free AI Resume Builder & Job Matcher - No Signup Required | Free Resume Tools</title>
+    <meta name="description" content="Get your resume ATS-ready with our free AI-powered resume optimizer. Match your resume to any job posting, get instant feedback, and boost your interview chances. No signup required!">
+
+    <meta name="theme-color" content="#3b3b3b">
+    <meta name="msapplication-TileColor" content="#3b3b3b">
+
+    <!-- Improve performance for SEO -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     <!-- Critical resource hints -->
     <link rel="preconnect" href="https://krzofnafayygoxoinkfv.supabase.co" />
@@ -15,9 +24,61 @@
     
     <!-- Preload critical resources -->
     <link rel="modulepreload" href="/src/main.tsx" />
+    <link rel="modulepreload" href="/assets/index-DDfuiFW.js" />
     <link rel="modulepreload" href="/assets/resumetailoring-ckktdo5k.js" />
     <link rel="modulepreload" href="/assets/modal-BvT-dTv1.js" />
     
+    <!-- Load CSS asynchronously to prevent render blocking -->
+    <link rel="preload" href="/assets/index-DhT7pdto.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/index-DhT7pdto.css"></noscript>
+
+    <!-- Add these to your <head> -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Free Resume Tools">
+    <link rel="canonical" href="https://freeresumetools.io/">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Free Resume Tools - AI-Powered Resume Optimization">
+    <meta property="og:description" content="Optimize your resume for free with AI-powered tailoring and job matching. No signup required!">
+    <meta property="og:image" content="https://freeresumetools.io/og-image.jpg">
+    <meta property="og:url" content="https://freeresumetools.io/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Resume Tools - AI-Powered Resume Optimization">
+    <meta name="twitter:description" content="Optimize your resume for free with AI-powered tailoring and job matching. No signup required!">
+    <meta name="twitter:image" content="https://freeresumetools.io/twitter-image.jpg">
+
+    <!-- Add multiple favicon sizes -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Free Resume Tools",
+      "description": "AI-powered resume optimization and job matching tool",
+      "url": "https://freeresumetools.io/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+     },
+     "featureList": [
+        "AI Resume Tailoring",
+        "Job Match Percentage",
+        "Resume Optimization",
+        "No Signup Required"
+     ]
+    }
+    </script>
     
     <!-- Critical CSS for immediate rendering -->
     <style>
@@ -175,11 +236,6 @@
         flex-direction: column;
       }
     </style>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9699254139710581"
-     crossorigin="anonymous"></script>
-
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="fapjapSzkSqyAZdBbViYZA" async></script>
     
   </head>
   <body>
@@ -188,5 +244,29 @@
     <!-- Main app script -->
     <script type="module" src="/src/main.tsx"></script>
     
+    <!-- Defer analytics to improve page load performance -->
+    <script>
+      function loadAnalytics() {
+        
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "seci0whcq4");
+      }
+      
+      // Load analytics after initial page load or user interactions
+      if (document.readyState === 'complete') {
+        setTimeout(loadAnalytics, 1000);
+      } else {
+        window.addEventListener('load', () => setTimeout(loadAnalytics, 1000));
+      }
+      
+      // Also load on first user interaction
+      ['click', 'scroll', 'keydown', 'touchstart'].forEach(event => {
+        document.addEventListener(event, loadAnalytics, { once: true, passive: true });
+      });
+    </script>
   </body>
 </html>
