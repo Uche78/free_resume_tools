@@ -168,13 +168,6 @@ const FixResume: React.FC = () => {
               "availability": "https://schema.org/InStock",
               "validFrom": "2025-01-01"
             },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "4150",
-              "bestRating": "5",
-              "worstRating": "1"
-            },
             "potentialAction": {
               "@type": "UseAction",
               "target": currentUrl,
