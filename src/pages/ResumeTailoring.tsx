@@ -29,6 +29,10 @@ const ResumeTailoring: React.FC = () => {
   const serviceDescription = "Optimize your resume for specific job descriptions using our professional AI-powered tailoring tool. Improve ATS compatibility and enhance your career prospects with personalized resume optimization.";
   const category = "Career Services";
   const providerName = "FreeResumeTools";
+
+  //Google Ad code
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9699254139710581"
+     crossorigin="anonymous"></script>
   
   // Load non-critical sections after initial render - mobile optimized timing
   useEffect(() => {
