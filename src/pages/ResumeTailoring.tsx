@@ -26,7 +26,7 @@ const ResumeTailoring: React.FC = () => {
   const currentUrl = "https://freeresumetools.io/resume-tailoring";
   const siteUrl = "https://freeresumetools.io";
   const serviceName = "Professional AI Resume Tailoring Tool";
-  const serviceDescription = "Optimize your resume for specific job descriptions using our professional AI-powered tailoring tool. Improve ATS compatibility and enhance your career prospects with personalized resume optimization.";
+  const serviceDescription = "Optimize your resume for specific job descriptions using our free professional AI-powered tailoring tool. Improve ATS compatibility and enhance your career prospects with personalized resume optimization.";
   const category = "Career Services";
   const providerName = "FreeResumeTools";
 
@@ -209,7 +209,7 @@ const ResumeTailoring: React.FC = () => {
         <link rel="preconnect" href="https://krzofnafayygoxoinkfv.supabase.co" />
         <link rel="dns-prefetch" href="https://hook.us2.make.com" />
         
-        <title>Professional AI Resume Tailoring Tool - Optimize Your Resume | FreeResumeTools</title>
+        <title>Free Professional AI Resume Tailoring Tool - Optimize Your Resume | FreeResumeTools</title>
         <meta name="description" content="Professional AI-powered resume tailoring tool that optimizes your resume for specific job descriptions. Improve ATS compatibility and enhance your career prospects with personalized resume optimization." />
         <meta name="keywords" content="resume tailoring, professional resume optimization, ATS compatibility, career enhancement, job application tools, resume improvement" />
         
@@ -434,7 +434,7 @@ const ResumeTailoring: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="hero-title">
-                Professional AI Resume Tailoring Tool
+                Free Professional AI Resume Tailoring Tool
               </h1>
               <p className="hero-subtitle">
                 Optimize your resume for specific job descriptions using our professional AI-powered tailoring tool.
