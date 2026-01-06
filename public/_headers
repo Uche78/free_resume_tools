@@ -1,4 +1,14 @@
-# Cache static assets
+# JavaScript files - MUST set Content-Type
+/assets/*.js
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS files
+/assets/*.css
+  Content-Type: text/css; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+
+# All assets
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
@@ -10,11 +20,13 @@
 /images/*
   Cache-Control: public, max-age=31536000
 
-# Cache CSS and JS files
+# Root level JS/CSS (if any)
 /*.css
+  Content-Type: text/css; charset=utf-8
   Cache-Control: public, max-age=31536000, immutable
 
 /*.js
+  Content-Type: application/javascript; charset=utf-8
   Cache-Control: public, max-age=31536000, immutable
 
 # Cache robots.txt and sitemap
@@ -22,6 +34,7 @@
   Cache-Control: public, max-age=86400
 
 /sitemap.xml
+  Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=86400
 
 # HTML files - shorter cache
