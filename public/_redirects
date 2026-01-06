@@ -1,5 +1,2 @@
-# Serve assets as-is (don't redirect)
-/assets/*  /assets/:splat  200
-
 # Everything else goes to SPA
 /*  /index.html  200
