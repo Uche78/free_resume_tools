@@ -2,12 +2,6 @@
   publish = "dist"
   command = "rm -rf dist && npm run build"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
-
 [[headers]]
   for = "/assets/*.js"
   [headers.values]
