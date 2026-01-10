@@ -1,17 +1,12 @@
 [build]
   publish = "dist"
-  command = "npm run build"
-
-[[redirects]]
-  from = "/assets/*"
-  to = "/assets/:splat"
-  status = 200
-  force = true
+  command = "rm -rf dist && npm run build"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
 
 [[headers]]
   for = "/assets/*.js"
@@ -23,9 +18,4 @@
   for = "/assets/*.css"
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
