@@ -25,6 +25,17 @@ const JobMatchAssessment: React.FC = () => {
   const category = "Career Services";
   const providerName = "FreeResumeTools";
 
+  //Added helper jan10
+  const openInNewTab = (url: string) => {
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
+const handleDownloadFromModal = () => {
+  if (!matchDownloadUrl) return;
+  openInNewTab(matchDownloadUrl);
+};
+
+
   const handleJobMatch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
@@ -85,7 +96,7 @@ const JobMatchAssessment: React.FC = () => {
             const data = JSON.parse(responseText);
             if (data.matchDownloadUrl) {
               setMatchDownloadUrl(data.matchDownloadUrl);
-              setModalMessage('Enjoyed using this tool?\nLeave a quick review to help us keep it free!');
+              setModalMessage('Download your job match report now.\n\nIf this tool helped, a quick review helps keep FreeResumeTools free for the next job seeker (optional).');
               setShowSuccessModal(true);
             } else {
               setModalMessage('Job match analysis started! Your report will be available shortly.');
@@ -767,12 +778,15 @@ const JobMatchAssessment: React.FC = () => {
       </main>
       
       <Modal
-        isOpen={showSuccessModal}
-        onClose={() => setShowSuccessModal(false)}
-        title="🎉 Your Job Match Analysis is Ready!"
-        message={modalMessage}
-        type="success"
-      />
+  isOpen={showSuccessModal}
+  onClose={() => setShowSuccessModal(false)}
+  title="Your job match report is ready"
+  message={modalMessage}
+  type="success"
+  primaryActionLabel="Download Match Report"
+  onPrimaryAction={matchDownloadUrl ? handleDownloadFromModal : undefined}
+/>
+
       
       <Footer />
     </div>
