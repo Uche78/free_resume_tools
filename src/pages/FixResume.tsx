@@ -25,6 +25,17 @@ const FixResume: React.FC = () => {
   const category = "Career Services";
   const providerName = "FreeResumeTools";
 
+  // Added helper jan10
+  const openInNewTab = (url: string) => {
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
+const handleDownloadFromModal = () => {
+  if (!downloadUrl) return;
+  openInNewTab(downloadUrl);
+};
+
+
   const handleFixResume = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
@@ -85,7 +96,7 @@ const FixResume: React.FC = () => {
         if (data && data.fixDownloadUrl) {
           console.log('Setting fixDownloadUrl:', data.fixDownloadUrl);
           setDownloadUrl(data.fixDownloadUrl);
-          setModalMessage('Enjoyed using this tool?\nLeave a quick review to help us keep it free!');
+          setModalMessage('Download your resume analysis report now.\n\nIf this tool helped, a quick review helps keep FreeResumeTools free for the next job seeker (optional).');
           setShowSuccessModal(true);
         } else {
           setModalMessage('Resume analysis request accepted! Your report is being processed.');
@@ -746,12 +757,15 @@ const FixResume: React.FC = () => {
       </main>
       
       <Modal
-        isOpen={showSuccessModal}
-        onClose={() => setShowSuccessModal(false)}
-        title="Your Resume Analysis is Ready!"
-        message={modalMessage}
-        type="success"
-      />
+  isOpen={showSuccessModal}
+  onClose={() => setShowSuccessModal(false)}
+  title="Your resume analysis is ready"
+  message={modalMessage}
+  type="success"
+  primaryActionLabel="Download Analysis Report"
+  onPrimaryAction={downloadUrl ? handleDownloadFromModal : undefined}
+/>
+
       
       <Footer />
     </div>
