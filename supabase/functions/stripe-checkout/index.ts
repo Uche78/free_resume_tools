@@ -13,7 +13,6 @@ const stripe = new Stripe(stripeSecret, {
 
 // Helper function to create responses with CORS headers
 function corsResponse(body: string | object | null, status = 200) {
-  // Ensure body is never null or undefined
   const responseBody = body || { error: 'No response data available' };
   
   const headers = {
@@ -31,15 +30,6 @@ function corsResponse(body: string | object | null, status = 200) {
 
 Deno.serve(async (req) => {
   try {
-    // Check required environment variables
-    if (!Deno.env.get('SUPABASE_URL')) {
-      console.error('Missing SUPABASE_URL environment variable');
-      return corsResponse({ error: 'Server configuration error' }, 500);
-    }
-    if (!Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')) {
-      console.error('Missing SUPABASE_SERVICE_ROLE_KEY environment variable');
-      return corsResponse({ error: 'Server configuration error' }, 500);
-    }
     if (!stripeSecret) {
       console.error('Missing STRIPE_SECRET_KEY environment variable');
       return corsResponse({ error: 'Server configuration error' }, 500);
@@ -53,7 +43,51 @@ Deno.serve(async (req) => {
       return corsResponse({ error: 'Method not allowed' }, 405);
     }
 
-    const { price_id, success_url, cancel_url, mode } = await req.json();
+    const body = await req.json();
+    const { price_id, success_url, cancel_url, mode, amount, donation } = body;
+
+    // ====== DONATION PATH - No auth required ======
+    if (donation === true && amount) {
+      if (!amount || amount < 1) {
+        return corsResponse({ error: 'Invalid donation amount. Minimum is $1.' }, 400);
+      }
+
+      try {
+        const session = await stripe.checkout.sessions.create({
+          payment_method_types: ['card'],
+          line_items: [{
+            price_data: {
+              currency: 'usd',
+              product_data: {
+                name: 'Donation to Free Resume Tools',
+                description: 'Thank you for supporting our free tools!'
+              },
+              unit_amount: Math.round(amount * 100), // Convert to cents
+            },
+            quantity: 1,
+          }],
+          mode: 'payment',
+          success_url: success_url || 'https://freeresumetools.io/donate?success=true',
+          cancel_url: cancel_url || 'https://freeresumetools.io/donate?canceled=true',
+        });
+
+        console.log(`Created donation checkout session ${session.id} for amount $${amount}`);
+        return corsResponse({ sessionId: session.id, url: session.url });
+      } catch (stripeError) {
+        console.error('Stripe donation checkout error:', stripeError);
+        return corsResponse({ error: 'Failed to create donation checkout' }, 500);
+      }
+    }
+
+    // ====== SUBSCRIPTION/AUTHENTICATED PATH - Original code ======
+    if (!Deno.env.get('SUPABASE_URL')) {
+      console.error('Missing SUPABASE_URL environment variable');
+      return corsResponse({ error: 'Server configuration error' }, 500);
+    }
+    if (!Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')) {
+      console.error('Missing SUPABASE_SERVICE_ROLE_KEY environment variable');
+      return corsResponse({ error: 'Server configuration error' }, 500);
+    }
 
     const error = validateParameters(
       { price_id, success_url, cancel_url, mode },
@@ -106,9 +140,6 @@ Deno.serve(async (req) => {
 
     let customerId;
 
-    /**
-     * In case we don't have a mapping yet, the customer does not exist and we need to create one.
-     */
     if (!customer || !customer.customer_id) {
       const newCustomer = await stripe.customers.create({
         email: user.email,
@@ -127,7 +158,6 @@ Deno.serve(async (req) => {
       if (createCustomerError) {
         console.error('Failed to save customer information in the database:', createCustomerError);
 
-        // Try to clean up both the Stripe customer and subscription record
         try {
           await stripe.customers.del(newCustomer.id);
           await supabase.from('stripe_subscriptions').delete().eq('customer_id', newCustomer.id);
@@ -147,7 +177,6 @@ Deno.serve(async (req) => {
         if (createSubscriptionError) {
           console.error('Failed to save subscription in the database:', createSubscriptionError);
 
-          // Try to clean up the Stripe customer since we couldn't create the subscription
           try {
             await stripe.customers.del(newCustomer.id);
           } catch (deleteError) {
@@ -165,7 +194,6 @@ Deno.serve(async (req) => {
       customerId = customer.customer_id;
 
       if (mode === 'subscription') {
-        // Verify subscription exists for existing customer
         const { data: subscription, error: getSubscriptionError } = await supabase
           .from('stripe_subscriptions')
           .select('status')
@@ -178,7 +206,6 @@ Deno.serve(async (req) => {
         }
 
         if (!subscription) {
-          // Create subscription record for existing customer if missing
           const { error: createSubscriptionError } = await supabase.from('stripe_subscriptions').insert({
             customer_id: customerId,
             status: 'not_started',
@@ -193,7 +220,6 @@ Deno.serve(async (req) => {
     }
 
     try {
-      // create Checkout Session
       const session = await stripe.checkout.sessions.create({
         customer: customerId,
         payment_method_types: ['card'],
