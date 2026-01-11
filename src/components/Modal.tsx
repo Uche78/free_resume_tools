@@ -50,6 +50,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, message, type = '
         <p className="text-gray-600 mb-6 text-center whitespace-pre-line">{message}</p>
         
         <div className="space-y-3">
+
+          <button
+            onClick={onClose}
+            className="flex items-center justify-center gap-2 w-full py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            Skip to Download
+          </button>
+          
           <a
             href="https://www.trustpilot.com/evaluate/freeresumetools.io"
             target="_blank"
@@ -59,14 +68,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, message, type = '
             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
             Leave a Review
           </a>
-          
-          <button
-            onClick={onClose}
-            className="flex items-center justify-center gap-2 w-full py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-          >
-            <Download className="w-4 h-4" />
-            Skip to Download
-          </button>
         </div>
       </div>
     </div>
