@@ -4,7 +4,6 @@ import { Heart, Coffee, ChevronRight, Loader2 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
-import { createCheckoutSession } from '../lib/stripe';
 import { products } from '../stripe-config';
 
 const DonationPage: React.FC = () => {
@@ -13,17 +12,36 @@ const DonationPage: React.FC = () => {
   const siteUrl = "https://freeresumetools.io"; // Your website's base URL
   const logoUrl = "https://krzofnafayygoxoinkfv.supabase.co/storage/v1/object/public/public-landing-assets/hero/resumetoolfavicon.svg"; // Replace with your actual logo URL
 
-  const handleDonation = async () => {
-    setIsLoading(true);
-    try {
-      await createCheckoutSession(products.coffee.priceId, products.coffee.mode);
-    } catch (error) {
-      console.error('Checkout error:', error);
-      alert('Failed to start checkout process. Please try again.');
-    } finally {
-      setIsLoading(false);
+const handleDonation = async () => {
+  setIsLoading(true);
+  try {
+    // Call Netlify function
+    const response = await fetch('/.netlify/functions/create-donation-checkout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ 
+        amount: 5 // $5 for coffee - adjust as needed
+      })
+    });
+
+    const data = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to create checkout');
     }
-  };
+
+    // Redirect to Stripe Checkout
+    window.location.href = data.url;
+    
+  } catch (error) {
+    console.error('Checkout error:', error);
+    alert('Failed to start checkout process. Please try again.');
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-white">
