@@ -46,6 +46,17 @@ const ResumeTailoring: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Added helper for download jan10
+  const openInNewTab = (url: string) => {
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
+const handleDownloadFromModal = () => {
+  if (!downloadUrl) return;
+  openInNewTab(downloadUrl);
+};
+
+
   // Optimized analytics loading - more aggressive mobile delay
   useEffect(() => {
     const loadAnalytics = () => {
@@ -145,7 +156,7 @@ const ResumeTailoring: React.FC = () => {
             if (data.documentUrl) {
               setDownloadUrl(data.documentUrl);
               setShowEmailOption(true);
-              setModalMessage('Your tailored resume is ready for download!');
+              setModalMessage('Download your tailored resume now.\n\nIf this tool helped, a quick review helps keep FreeResumeTools free for the next job seeker (optional).');
               setShowSuccessModal(true);
             } else {
               setModalMessage('Resume tailoring request processed! The optimized resume will be available shortly.');
@@ -867,12 +878,15 @@ const ResumeTailoring: React.FC = () => {
       </main>
       
       <Modal
-        isOpen={showSuccessModal}
-        onClose={() => setShowSuccessModal(false)}
-        title="Your Tailored Resume is Ready!"
-        message={modalMessage}
-        type="success"
-      />
+  isOpen={showSuccessModal}
+  onClose={() => setShowSuccessModal(false)}
+  title="Your tailored resume is ready"
+  message={modalMessage}
+  type="success"
+  primaryActionLabel="Download Resume"
+  onPrimaryAction={downloadUrl ? handleDownloadFromModal : undefined}
+/>
+
       
       <Footer />
     </div>
