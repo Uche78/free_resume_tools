@@ -15,7 +15,7 @@ const DonationPage: React.FC = () => {
 const handleDonation = async () => {
   setIsLoading(true);
   try {
-    // Call Netlify function
+    // Call Netlify functions
     const response = await fetch('/.netlify/functions/create-donation-checkout', {
       method: 'POST',
       headers: {
