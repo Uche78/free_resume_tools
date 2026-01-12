@@ -2,260 +2,69 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://krzofnafayygoxoinkfv.supabase.co/storage/v1/object/public/public-landing-assets/hero/resumetoolfavicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Free AI Resume Builder & Job Matcher - No Signup Required | Free Resume Tools</title>
-    <meta name="description" content="Get your resume ATS-ready with our free AI-powered resume optimizer. Match your resume to any job posting, get instant feedback, and boost your interview chances. No signup required!">
+    <meta
+      name="description"
+      content="Get your resume ATS-ready with our free AI-powered resume optimizer. Match your resume to any job posting, get instant feedback, and boost your interview chances. No signup required!"
+    />
 
-    <meta name="theme-color" content="#3b3b3b">
-    <meta name="msapplication-TileColor" content="#3b3b3b">
+    <meta name="theme-color" content="#3b3b3b" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Free Resume Tools" />
+    <link rel="canonical" href="https://freeresumetools.io/" />
 
-    <!-- Improve performance for SEO -->
-    <meta name="format-detection" content="telephone=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- Critical resource hints -->
+    <!-- PWA / icons (served from /public) -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Resource hints (safe) -->
     <link rel="preconnect" href="https://krzofnafayygoxoinkfv.supabase.co" />
     <link rel="dns-prefetch" href="https://hook.us2.make.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-    <!-- Add these to your <head> -->
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Free Resume Tools">
-    <link rel="canonical" href="https://freeresumetools.io/">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Resume Tools - AI-Powered Resume Optimization" />
+    <meta property="og:description" content="Optimize your resume for free with AI-powered tailoring and job matching. No signup required!" />
+    <meta property="og:image" content="https://freeresumetools.io/og-image.jpg" />
+    <meta property="og:url" content="https://freeresumetools.io/" />
+    <meta property="og:type" content="website" />
 
-    <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="Free Resume Tools - AI-Powered Resume Optimization">
-    <meta property="og:description" content="Optimize your resume for free with AI-powered tailoring and job matching. No signup required!">
-    <meta property="og:image" content="https://freeresumetools.io/og-image.jpg">
-    <meta property="og:url" content="https://freeresumetools.io/">
-    <meta property="og:type" content="website">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Resume Tools - AI-Powered Resume Optimization" />
+    <meta name="twitter:description" content="Optimize your resume for free with AI-powered tailoring and job matching. No signup required!" />
+    <meta name="twitter:image" content="https://freeresumetools.io/twitter-image.jpg" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Free Resume Tools - AI-Powered Resume Optimization">
-    <meta name="twitter:description" content="Optimize your resume for free with AI-powered tailoring and job matching. No signup required!">
-    <meta name="twitter:image" content="https://freeresumetools.io/twitter-image.jpg">
-
-    <!-- Add multiple favicon sizes -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-
+    <!-- Your JSON-LD is fine to keep -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Free Resume Tools",
-      "description": "AI-powered resume optimization and job matching tool",
-      "url": "https://freeresumetools.io/",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web Browser",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-     },
-     "featureList": [
-        "AI Resume Tailoring",
-        "Job Match Percentage",
-        "Resume Optimization",
-        "No Signup Required"
-     ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Free Resume Tools",
+        "description": "AI-powered resume optimization and job matching tool",
+        "url": "https://freeresumetools.io/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "AI Resume Tailoring",
+          "Job Match Percentage",
+          "Resume Optimization",
+          "No Signup Required"
+        ]
+      }
     </script>
-    
-    <!-- Critical CSS for immediate rendering -->
-    <style>
-      /* Critical CSS for above-the-fold content */
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-        line-height: 1.5;
-        color: #374151;
-      }
-      
-      #root {
-        min-height: 100vh;
-      }
-      
-      /* Hero Section Critical Styles */
-      .hero-critical {
-        background: linear-gradient(to bottom, #f9fafb, #ffffff);
-        padding: 2rem 1rem;
-      }
-      
-      .hero-title {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #3b3b3b;
-        text-align: center;
-        margin-bottom: 1rem;
-        line-height: 1.2;
-      }
-      
-      .hero-subtitle {
-        font-size: 1rem;
-        color: #4b5563;
-        text-align: center;
-        margin-bottom: 1.5rem;
-        line-height: 1.5;
-        max-width: 48rem;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      /* Form Critical Styles */
-      .form-container {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 12px;
-        border: 2px solid #3b3b3b;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-        max-width: 1536px;
-        margin: 0 auto;
-      }
-      
-      .form-input {
-        width: 100%;
-        padding: 12px;
-        border: 2px solid #e5e7eb;
-        border-radius: 8px;
-        transition: border-color 0.2s, box-shadow 0.2s;
-        font-size: 14px;
-      }
-      
-      .form-input:focus {
-        outline: none;
-        border-color: #3b3b3b;
-        box-shadow: 0 0 0 3px rgba(59, 59, 59, 0.1);
-      }
-      
-      .btn-primary {
-        background-color: #3b3b3b;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: 500;
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-      }
-      
-      .btn-primary:hover {
-        background-color: rgba(59, 59, 59, 0.9);
-      }
-      
-      .btn-primary:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-      }
-      
-      /* Trust indicators */
-      .trust-indicators {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        font-size: 0.875rem;
-        color: #6b7280;
-      }
-      
-      /* Container utilities */
-      .container {
-        max-width: 1536px;
-        margin: 0 auto;
-        padding: 0 1rem;
-      }
-      
-      /* Loading states to prevent layout shift */
-      .loading-placeholder {
-        background: #f3f4f6;
-        border-radius: 8px;
-        animation: pulse 2s infinite;
-      }
-      
-      @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.5; }
-      }
-      
-      /* Responsive breakpoints */
-      @media (min-width: 640px) {
-        .hero-critical { padding: 3rem 1.5rem; }
-        .hero-title { font-size: 1.875rem; }
-        .hero-subtitle { font-size: 1.125rem; }
-        .form-container { padding: 2rem; }
-        .form-input { font-size: 16px; }
-        .trust-indicators { gap: 2rem; }
-        .container { padding: 0 1.5rem; }
-      }
-      
-      @media (min-width: 1024px) {
-        .hero-critical { padding: 4rem 2rem; }
-        .hero-title { font-size: 3rem; }
-        .hero-subtitle { font-size: 1.25rem; }
-        .container { padding: 0 2rem; }
-      }
-      
-      /* Prevent flash of unstyled content */
-      .min-h-screen {
-        min-height: 100vh;
-      }
-      
-      .bg-white {
-        background-color: #ffffff;
-      }
-      
-      .flex {
-        display: flex;
-      }
-      
-      .flex-col {
-        flex-direction: column;
-      }
-    </style>
-    
   </head>
+
   <body>
     <div id="root"></div>
-    
-    <!-- Main app script -->
+
+    <!-- Vite entry (Vite rewrites this in dist build) -->
     <script type="module" src="/src/main.tsx"></script>
-    
-    <!-- Defer analytics to improve page load performance -->
-    <script>
-      function loadAnalytics() {
-        
-        // Microsoft Clarity
-        (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "seci0whcq4");
-      }
-      
-      // Load analytics after initial page load or user interactions
-      if (document.readyState === 'complete') {
-        setTimeout(loadAnalytics, 1000);
-      } else {
-        window.addEventListener('load', () => setTimeout(loadAnalytics, 1000));
-      }
-      
-      // Also load on first user interaction
-      ['click', 'scroll', 'keydown', 'touchstart'].forEach(event => {
-        document.addEventListener(event, loadAnalytics, { once: true, passive: true });
-      });
-    </script>
+
   </body>
 </html>
