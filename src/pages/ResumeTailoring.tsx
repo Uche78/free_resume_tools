@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import { TrustIndicators } from '../components/TrustIndicators';
 import { HowItWorksSection } from '../components/HowItWorksSection';
 import Footer from '../components/Footer';
+import AwarenessBanner from '../components/AwarenessBanner';
 import Modal from '../components/Modal';
 import { Helmet } from 'react-helmet-async';
 import { supabase } from '../utils/supabase';
@@ -419,6 +420,7 @@ const handleDownloadFromModal = () => {
       </Helmet>
       
       <Header />
+      <AwarenessBanner />
       
       {/* Enhanced Breadcrumb Navigation */}
       <nav className="bg-gray-50 border-b" aria-label="Breadcrumb">
