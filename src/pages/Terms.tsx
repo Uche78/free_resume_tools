@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AwarenessBanner from '../components/AwarenessBanner';
 import Terms from './pages/Terms';
 import { Helmet } from 'react-helmet-async';
 
@@ -58,6 +59,8 @@ const TermsPage: React.FC = () => {
         </script>
       </Helmet>
       <Header />
+      <AwarenessBanner />
+      
       {/* Breadcrumb */}
       <nav className="bg-gray-50 border-b">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
