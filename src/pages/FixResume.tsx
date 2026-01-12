@@ -4,6 +4,7 @@ import { createClient } from '@supabase/supabase-js';
 import { FileText, Upload, Download, ChevronRight, CheckCircle, Star, Clock, Users, AlertCircle, TrendingUp, Award, Target } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import AwarenessBanner from '../components/AwarenessBanner';
 import { Helmet } from 'react-helmet-async';
 import Modal from '../components/Modal';
 
@@ -325,6 +326,7 @@ const handleDownloadFromModal = () => {
       </Helmet>
       
       <Header />
+      <AwarenessBanner />
       
       {/* Enhanced Breadcrumb Navigation */}
       <nav className="bg-gray-50 border-b" aria-label="Breadcrumb">
