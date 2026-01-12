@@ -59,7 +59,6 @@ const Modal: React.FC<ModalProps> = ({
           <button
             onClick={() => {
               onPrimaryAction?.();
-              onClose();
             }}
             disabled={!onPrimaryAction}
             className={`flex items-center justify-center gap-2 w-full py-2 rounded-lg transition-colors
