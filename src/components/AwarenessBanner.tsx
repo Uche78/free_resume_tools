@@ -85,16 +85,6 @@ const AwarenessBanner: React.FC<AwarenessBannerProps> = ({
           </div>
 
           <div className="flex items-center gap-2 flex-shrink-0">
-            <a
-            href="https://www.trustpilot.com/evaluate/freeresumetools.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-          >
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            Leave a quick review
-          </a>
-            
             <button
               type="button"
               onClick={handleReviewClick}
