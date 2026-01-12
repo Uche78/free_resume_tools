@@ -165,7 +165,7 @@ const Header: React.FC = () => {
               }`}
             >
               <Coffee className="w-5 h-5" />
-              <span>Support Us</span>
+              <span>Buy Us a Coffee</span>
             </Link>
 
             <a
@@ -258,7 +258,7 @@ const Header: React.FC = () => {
                     : 'text-gray-600'
                 }`}
               >
-                  <span>Support Us</span>
+                  <span>Buy Us a Coffee</span>
               </Link>
 
                <a
