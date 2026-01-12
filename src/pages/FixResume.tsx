@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import AwarenessBanner from '../components/AwarenessBanner';
 import { Helmet } from 'react-helmet-async';
 import Modal from '../components/Modal';
-import { supabase } from '../lib/supabaseClient';
+import { supabase } from '../utils/supabase';
 
 const FixResume: React.FC = () => {
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
