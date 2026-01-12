@@ -595,6 +595,12 @@ const handleDownloadFromModal = () => {
                             <p className="text-sm text-gray-600 leading-relaxed">
                               Our AI is analyzing your resume and optimizing it for the job description. This typically takes 1-2 minutes.
                             </p>
+
+                            {/* Gentle transparency reminder */}
+                            <p className="mt-3 text-xs text-gray-500 leading-relaxed">
+                             FreeResumeTools is independently built and kept free by the community.
+                             If this helps, a quick review later helps us support more job seekers.
+                           </p>
                           </div>
                         </div>
                       )}
