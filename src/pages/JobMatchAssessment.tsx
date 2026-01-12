@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import AwarenessBanner from '../components/AwarenessBanner';
 import Modal from '../components/Modal';
 import { Helmet } from 'react-helmet-async';
-import { supabase } from '../lib/supabaseClient';
+import { supabase } from '../utils/supabase';
 
 const JobMatchAssessment: React.FC = () => {
   const [matchDownloadUrl, setMatchDownloadUrl] = useState<string | null>(null);
