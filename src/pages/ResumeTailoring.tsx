@@ -32,8 +32,10 @@ const ResumeTailoring: React.FC = () => {
   const providerName = "FreeResumeTools";
 
   //Google Ad code
+  <Helmet>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9699254139710581"
      crossorigin="anonymous"></script>
+  </Helmet>
   
   // Load non-critical sections after initial render - mobile optimized timing
   useEffect(() => {
